@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- Identitas HTML -->
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<!-- Pengaturan Tampilan HTML dengan CSS -->
+    <style>
+        html{
+            background-color: rgb(36, 36, 36);
+        }
+        header {
+            background: linear-gradient(to top, #0E9A8A, #006156);
+            padding: 0px;
+            font-family: Arial;
+            color: #ffffff;
+        }
+        table {
+            vertical-align: top;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            vertical-align: top;
+            padding: 12px;
+        }
+        body {
+            line-height: 1.5;
+            text-align: justify;
+            font-family: calibri;
+            color: #ffffff;
+            padding: 0px;
+        }
+        footer {
+            background: linear-gradient(to bottom, #0E9A8A, #006156);
+            line-height: 0.1;
+            padding: 0px;
+            text-align: left;
+            font-family: Arial;
+            color: #ffffff;
+        }
+        .android, .windows {
+            display: none;
+        }
+        /* Pengaturan Tampilan Khusus Android */
+        @media (max-width: 359px) {
+            /*  Ukuran Tabel */
+            table {
+                width: 100%;
+                table-layout: fixed;
+                font-size: 14px;
+            }
+            th, td {
+                padding: 8px;
+                display: block;
+                width: 100%;
+            }
+            /* Ukuran Gambar dan Video */
+            img {
+                max-width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+            iframe {
+                width: 100%;
+                height: auto;
+                min-height: 200px;
+            }
+            /* Ukuran Teks */
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            h4 {
+                font-size: 16px;
+            }
+            h5 {
+                font-size: 14px;
+            }
+            h6 {
+                font-size: 12px;
+            }
+            p {
+                font-size: 16px;
+            }
+            /* Pengaturan Teks Tabel Header */
+            header table th {
+                text-align: center;
+            }
+            header table th img {
+                width: 60px;
+                height: auto;
+            }
+            /* Pengaturan Teks Tabel Body */
+            body table td {
+                display: block;
+                width: 100%;
+            }
+            body table td img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+<!-- Pengaturan Tampilan Khusus Windows -->
+    <div>
+        <div class="windows">
+<header>
+<h4>Halaman Login</h4>
+</header>
+<body>
+    <div style="display:flex;justify-content:center;align-items:center;margin:40px 0;">
+        <form style="background:#1e1e1e;padding:30px;border-radius:12px;box-shadow:0 0 15px rgba(0,0,0,0.5);width:320px;" action="index.html" method="post">
+            <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+                <img style="width: 85px; height: 81px;" src="https://images2.imgbox.com/0b/27/LTCK4tfu_o.png" alt="logo Kemenag">
+            </div>
+            <h2 style="text-align:center;margin-bottom:20px;color:#0E9A8A;">Login Akun</h2>
+                <!-- Kolom Username    -->
+                <label for="username" style="display:block;margin-bottom:6px;">Username</label>
+                <input type="text" id="username" name="username" placeholder="Masukkan username"
+                style="width:100%;padding:10px;margin-bottom:15px;border:none;border-radius:6px;outline:none;">
+                <!-- Kolom Password -->
+                <label for="password" style="display:block;margin-bottom:6px;">Password</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan password"style="width:100%;padding:10px;margin-bottom:20px;border:none;border-radius:6px;outline:none;">
+                <!-- Tombol Submit -->
+                <button type="submit"style="width:100%;padding:10px;background:#0E9A8A;border:none;border-radius:6px;color:white;font-weight:bold;cursor:pointer;">Login
+                </button>
+                <!-- Jika tidak punya akun -->
+                <p style="text-align:center;margin-top:15px;font-size:14px;">Belum punya akun? <a href="register.html" style="color:#0E9A8A;text-decoration:none;">Daftar</a>
+                    </p>
+        </form>
+    </div>  
+</body>
+            <footer>
+    <table style="text-align: left;" border="0">
+        <th><h6>&copy;2025 Neoverse - Muhammad Ihsan Anwar 251402044 Copyright All Right Reserved</h6>
+        </th>
+    </table>
+</footer>
+    </div>
+<!-- Akhir Pengaturan tampilan khusus Windows -->
+<!-- Penagaturan Tampilan Khusus -->
+<div>       
+<div class="android">
+    <header>
+<h4>Halaman Login</h4>
+    </header>
+            <body>
+                <div style="display:flex;justify-content:center;align-items:center;margin:40px 0;">
+        <form style="background:#1e1e1e;padding:30px;border-radius:12px;box-shadow:0 0 15px rgba(0,0,0,0.5);width:320px;"action="index.html" method="post">
+            <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+                <img style="width: 85px; height: 81px;" src="https://images2.imgbox.com/0b/27/LTCK4tfu_o.png" alt="logo Kemenag">
+            </div>
+            <h2 style="text-align:center;margin-bottom:20px;color:#0E9A8A;">Login Akun</h2>
+                <!-- Kolom Username    -->
+                <label for="username" style="display:block;margin-bottom:6px;">Username</label>
+                <input type="text" id="username" name="username" placeholder="Masukkan username"
+                style="width:100%;padding:10px;margin-bottom:15px;border:none;border-radius:6px;outline:none;">
+                <!-- Kolom Password -->
+                <label for="password" style="display:block;margin-bottom:6px;">Password</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan password"style="width:100%;padding:10px;margin-bottom:20px;border:none;border-radius:6px;outline:none;">
+                <!-- Tombol Submit -->
+                <button type="submit"style="width:100%;padding:10px;background:#0E9A8A;border:none;border-radius:6px;color:white;font-weight:bold;cursor:pointer;">Login
+                </button>
+                <!-- Jika tidak punya akun -->
+                <p style="text-align:center;margin-top:15px;font-size:14px;">Belum punya akun? <a href="register.html" style="color:#0E9A8A;text-decoration:none;">Daftar</a>
+                    </p>
+        </form>
+    </div>  
+</body>
+            <footer>
+    <table style="text-align: left; line-height: 1.5;" border="0">
+        <th><h6>&copy;2025 Neoverse - Muhammad Ihsan Anwar 251402044 Copyright All Right Reserved</h6>
+    </table>
+</footer>
+    </div>
+<!-- Akhir Pengaturan tampilan khusus Android -->
+<!-- Perintah Pengaturan Tampilan Android dan Windows -->
+<script>
+    // User Agent Browser
+    const ua = navigator.userAgent.toLowerCase();
+    // Pengaturan untuk tampilan Android
+    if (ua.includes("android")) {
+        document.querySelector(".android").style.display = "block";
+        // Pengaturan untuk tampilan Windows
+    } else if (ua.includes("windows")) {
+        document.querySelector(".windows").style.display = "block";
+        // Pengaturan untuk tampilan jika bukan Android atau Windows
+    } else {
+        document.body.innerHTML = "<h1>Ni websitenya cuman bisa dibuka di Android non mode dekstop dan Windows, masih tugas pemrograman web pertama, hehe. Bisa hubungi administrator@neoverse.my.id yahhh.</h1>";
+    }
+</script>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!-- Identitas HTML -->
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<!-- Pengaturan Tampilan HTML dengan CSS -->
+    <style>
+        html{
+            background-color: rgb(36, 36, 36);
+        }
+        header {
+            background: linear-gradient(to top, #0E9A8A, #006156);
+            padding: 0px;
+            font-family: Arial;
+            color: #ffffff;
+        }
+        table {
+            vertical-align: top;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            vertical-align: top;
+            padding: 12px;
+        }
+        body {
+            line-height: 1.5;
+            text-align: justify;
+            font-family: calibri;
+            color: #ffffff;
+            padding: 0px;
+        }
+        footer {
+            background: linear-gradient(to bottom, #0E9A8A, #006156);
+            line-height: 0.1;
+            padding: 0px;
+            text-align: left;
+            font-family: Arial;
+            color: #ffffff;
+        }
+        .android, .windows {
+            display: none;
+        }
+        /* Pengaturan Tampilan Khusus Android */
+        @media (max-width: 359px) {
+            /*  Ukuran Tabel */
+            table {
+                width: 100%;
+                table-layout: fixed;
+                font-size: 14px;
+            }
+            th, td {
+                padding: 8px;
+                display: block;
+                width: 100%;
+            }
+            /* Ukuran Gambar dan Video */
+            img {
+                max-width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+            iframe {
+                width: 100%;
+                height: auto;
+                min-height: 200px;
+            }
+            /* Ukuran Teks */
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            h4 {
+                font-size: 16px;
+            }
+            h5 {
+                font-size: 14px;
+            }
+            h6 {
+                font-size: 12px;
+            }
+            p {
+                font-size: 16px;
+            }
+            /* Pengaturan Teks Tabel Header */
+            header table th {
+                text-align: center;
+            }
+            header table th img {
+                width: 60px;
+                height: auto;
+            }
+            /* Pengaturan Teks Tabel Body */
+            body table td {
+                display: block;
+                width: 100%;
+            }
+            body table td img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+<!-- Pengaturan Tampilan Khusus Windows -->
+    <div>
+        <div class="windows">
+<header>
+<h4>Halaman Register</h4>
+</header>
+<body>
+    <div style="display:flex;justify-content:center;align-items:center;margin:40px 0;">
+        <form style="background:#1e1e1e;padding:30px;border-radius:12px;box-shadow:0 0 15px rgba(0,0,0,0.5);width:320px;" action="index.html" method="post">
+        <div style="display: flex; justify-content: center; margin-bottom: 20px;"><img style="width: 85px; height: 81px;" src="https://images2.imgbox.com/0b/27/LTCK4tfu_o.png" alt="logo Kemenag">
+            </div>
+<!-- Register Akun -->
+        <h2 style="text-align:center;margin-bottom:20px;color:#0E9A8A;">Register Akun</h2>
+         <!-- Kolom Username -->
+        <label for="username" style="display:block;margin-bottom:6px;">Username</label>
+        <input type="text" id="username" name="username" placeholder="Masukkan username" style="width:100%;padding:10px;margin-bottom:12px;border:none;border-radius:6px;outline:none;">
+        <!-- Kolom Email -->
+        <label for="email" style="display:block;margin-bottom:6px;">Email</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan email" style="width:100%;padding:10px;margin-bottom:12px;border:none;border-radius:6px;outline:none;">
+        <!-- Kolom Password -->
+        <label for="password" style="display:block;margin-bottom:6px;">Password</label>
+        <input type="password" id="password" name="password" placeholder="Masukkan password" style="width:100%;padding:10px;margin-bottom:12px;border:none;border-radius:6px;outline:none;">
+        <!-- Kolom Konfirmasi Password -->
+        <label for="confirm" style="display:block;margin-bottom:6px;">Konfirmasi Password</label>
+        <input type="password" id="confirm" name="confirm" placeholder="Konfirmasi password" style="width:100%;padding:10px;margin-bottom:20px;border:none;border-radius:6px;outline:none;">
+<!-- Biodata User -->
+        <h2 style="text-align:center;margin-bottom:20px;color:#0E9A8A;">Biodata</h2>
+        <!-- Kolom Nama -->
+        <label for="Nama" style="display:block;margin-bottom:6px;">Nama Lengkap</label>
+        <input type="text" id="Nama" name="username" placeholder="Masukkan Nama Lengkap" style="width:100%;padding:10px;margin-bottom:12px;border:none;border-radius:6px;outline:none;">
+        <!-- Jenis Kelamin -->
+        <label style="display:block;margin-bottom:6px;">Jenis Kelamin</label>
+        <input type="radio" id="Laki-laki" name="Jenis_Kelamin" value="Laki-laki" style="margin-right:8px;">
+        <label for="Laki-laki" style="margin-right:16px;">Laki-laki</label>
+        <input type="radio" id="Perempuan" name="Jenis_Kelamin" value="Perempuan" style="margin-right:8px;">
+        <label for="Perempuan">Perempuan</label>
+        <!-- Kategori -->
+        <label for="Kategori" style="display:block;margin-bottom:6px;">Kategori</label>
+        <select id="Kategori" name="Kategori" style="width:106%;padding:10px;margin-bottom:12px;border:none;border-radius:6px;outline:none;">
+            <option value="" disabled selected>Pilih Kategori</option>
+            <option value="Pelajar">Pelajar</option>
+            <option value="Guru">Guru</option>
+            <option value="Masyarakat">Masyarakat</option>
+        </select>
+        <!-- Alamat Lengkap -->
+        <label for="Alamat Lengkap" style="display:block;margin-bottom:6px;">Alamat Lengkap</label>
+        <textarea type="text" id="Alamat Lengkap" name="Alamat Lengkap" placeholder="Masukkan Alamat Lengkap" style="width:100%;padding:10px;margin-bottom:12px;border:none;border-radius:6px;outline:none;">
+        </textarea>
+        <!-- Minat -->
+        <label style="display:block;margin-bottom:6px;">Minat</label>
+        <input type="checkbox" id="Olahraga" name="Minat" value="Olahraga" style="margin-right:8px;"> 
+        <label for="Olahraga" style="margin-right:16px;">Olahraga</label>
+        <input type="checkbox" id="Seni" name="Minat" value="Seni" style="margin-right:8px;">
+        <label for="Seni" style="margin-right:16px;">Seni</label>
+        <input type="checkbox" id="Teknologi" name="Minat" value="Teknologi" style="margin-right:8px;">
+        <label for="Teknologi">Teknologi</label>
+        <!-- Kirim -->
+        <button type="submit" style="width:100%;padding:10px;background:#0E9A8A;border:none;border-radius:6px;color:white;font-weight:bold;cursor:pointer;">Register
+        </button>
+        <!-- Kalau Sudah Punya Akun -->
+        <p style="text-align:center;margin-top:15px;font-size:14px;"> Sudah punya akun? <a href="login.html" style="color:#0E9A8A;text-decoration:none;">Login</a>
+        </p>
+        </form>
+    </div>
+</body>
+<footer>
+    <table style="text-align: left;" border="0">
+        <th><h6>&copy;2025 Neoverse - Muhammad Ihsan Anwar 251402044 Copyright All Right Reserved</h6>
+        </th>
+    </table>
+</footer>
+    </div>
+<!-- Akhir Pengaturan tampilan khusus Windows -->
+<!-- Penagaturan Tampilan Khusus Android -->
+<div>       
+<div class="android">
+    <header>
+<h4>Halaman Register</h4>
+    </header>
+            <body>
+                <div style="display:flex;justify-content:center;align-items:center;margin:40px 0;">
+        <form style="background:#1e1e1e;padding:30px;border-radius:12px;box-shadow:0 0 15px rgba(0,0,0,0.5);width:320px;" action="index.html" method="post">
+        <div style="display: flex; justify-content: center; margin-bottom: 20px;"><img style="width: 85px; height: 81px;" src="https://images2.imgbox.com/0b/27/LTCK4tfu_o.png" alt="logo Kemenag">
+            </div>
+<!-- Register Akun -->
+        <h2 style="text-align:center;margin-bottom:20px;color:#0E9A8A;">Register Akun</h2>
+         <!-- Kolom Username -->
+        <label for="username" style="display:block;margin-bottom:6px;">Username</label>
+        <input type="text" id="username" name="username" placeholder="Masukkan username" style="width:100%;padding:10px;margin-bottom:12px;border:none;border-radius:6px;outline:none;">
+        <!-- Kolom Email -->
+        <label for="email" style="display:block;margin-bottom:6px;">Email</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan email" style="width:100%;padding:10px;margin-bottom:12px;border:none;border-radius:6px;outline:none;">
+        <!-- Kolom Password -->
+        <label for="password" style="display:block;margin-bottom:6px;">Password</label>
+        <input type="password" id="password" name="password" placeholder="Masukkan password" style="width:100%;padding:10px;margin-bottom:12px;border:none;border-radius:6px;outline:none;">
+        <!-- Kolom Konfirmasi Password -->
+        <label for="confirm" style="display:block;margin-bottom:6px;">Konfirmasi Password</label>
+        <input type="password" id="confirm" name="confirm" placeholder="Konfirmasi password" style="width:100%;padding:10px;margin-bottom:20px;border:none;border-radius:6px;outline:none;">
+<!-- Biodata User -->
+        <h2 style="text-align:center;margin-bottom:20px;color:#0E9A8A;">Biodata</h2>
+        <!-- Kolom Nama -->
+        <label for="Nama" style="display:block;margin-bottom:6px;">Nama Lengkap</label>
+        <input type="text" id="Nama" name="username" placeholder="Masukkan Nama Lengkap" style="width:100%;padding:10px;margin-bottom:12px;border:none;border-radius:6px;outline:none;">
+        <!-- Jenis Kelamin -->
+        <label style="display:block;margin-bottom:6px;">Jenis Kelamin</label>
+        <input type="radio" id="Laki-laki" name="Jenis_Kelamin" value="Laki-laki" style="margin-right:8px;">
+        <label for="Laki-laki" style="margin-right:16px;">Laki-laki</label>
+        <input type="radio" id="Perempuan" name="Jenis_Kelamin" value="Perempuan" style="margin-right:8px;">
+        <label for="Perempuan">Perempuan</label>
+        <!-- Kategori -->
+        <label for="Kategori" style="display:block;margin-bottom:6px;">Kategori</label>
+        <select id="Kategori" name="Kategori" style="width:106%;padding:10px;margin-bottom:12px;border:none;border-radius:6px;outline:none;">
+            <option value="" disabled selected>Pilih Kategori</option>
+            <option value="Pelajar">Pelajar</option>
+            <option value="Guru">Guru</option>
+            <option value="Masyarakat">Masyarakat</option>
+        </select>
+        <!-- Alamat Lengkap -->
+        <label for="Alamat Lengkap" style="display:block;margin-bottom:6px;">Alamat Lengkap</label>
+        <textarea type="text" id="Alamat Lengkap" name="Alamat Lengkap" placeholder="Masukkan Alamat Lengkap" style="width:100%;padding:10px;margin-bottom:12px;border:none;border-radius:6px;outline:none;">
+        </textarea>
+        <!-- Minat -->
+        <label style="display:block;margin-bottom:6px;">Minat</label>
+        <input type="checkbox" id="Olahraga" name="Minat" value="Olahraga" style="margin-right:8px;"> 
+        <label for="Olahraga" style="margin-right:16px;">Olahraga</label>
+        <input type="checkbox" id="Seni" name="Minat" value="Seni" style="margin-right:8px;">
+        <label for="Seni" style="margin-right:16px;">Seni</label>
+        <input type="checkbox" id="Teknologi" name="Minat" value="Teknologi" style="margin-right:8px;">
+        <label for="Teknologi">Teknologi</label>
+        <!-- Kirim -->
+        <button type="submit" style="width:100%;padding:10px;background:#0E9A8A;border:none;border-radius:6px;color:white;font-weight:bold;cursor:pointer;">Register
+        </button>
+        <!-- Kalau Sudah Punya Akun -->
+        <p style="text-align:center;margin-top:15px;font-size:14px;"> Sudah punya akun? <a href="login.html" style="color:#0E9A8A;text-decoration:none;">Login</a>
+        </p>
+        </form>
+    </div>
+</body>
+<footer>
+    <table style="text-align: left; line-height: 1.5;" border="0">
+        <th><h6>&copy;2025 Neoverse - Muhammad Ihsan Anwar 251402044 Copyright All Right Reserved</h6>
+</footer>
+    </div>
+<!-- Akhir Pengaturan tampilan khusus Android -->
+<!-- Perintah Pengaturan Tampilan Android dan Windows -->
+<script>
+    // User Agent Browser
+    const ua = navigator.userAgent.toLowerCase();
+    // Pengaturan untuk tampilan Android
+    if (ua.includes("android")) {
+        document.querySelector(".android").style.display = "block";
+        // Pengaturan untuk tampilan Windows
+    } else if (ua.includes("windows")) {
+        document.querySelector(".windows").style.display = "block";
+        // Pengaturan untuk tampilan jika bukan Android atau Windows
+    } else {
+        document.body.innerHTML = "<h1>Ni websitenya cuman bisa dibuka di Android non mode dekstop dan Windows, masih tugas pemrograman web pertama, hehe. Bisa hubungi administrator@neoverse.my.id yahhh.</h1>";
+    }
+</script>
+</html>

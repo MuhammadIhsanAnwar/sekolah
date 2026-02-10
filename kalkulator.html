@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <!-- Pengaturan Tampilan HTML dengan CSS -->
+    <style>
+        html{
+            background-color: rgb(36, 36, 36);
+        }
+        header {
+            background: linear-gradient(to top, #0E9A8A, #006156);
+            padding: 0px;
+            font-family: Arial;
+            color: #ffffff;
+        }
+        table {
+            vertical-align: top;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            vertical-align: top;
+            padding: 12px;
+        }
+        body {
+            line-height: 1.5;
+            text-align: justify;
+            font-family: calibri;
+            color: #ffffff;
+            padding: 0px;
+        }
+        footer {
+            background: linear-gradient(to bottom, #0E9A8A, #006156);
+            line-height: 0.1;
+            padding: 0px;
+            text-align: left;
+            font-family: Arial;
+            color: #ffffff;
+        }
+        .android, .windows {
+            display: none;
+        }
+        /* Pengaturan Tampilan Khusus Android */
+        @media (max-width: 359px) {
+            /*  Ukuran Tabel */
+            table {
+                width: 100%;
+                table-layout: fixed;
+                font-size: 14px;
+            }
+            th, td {
+                padding: 8px;
+                display: block;
+                width: 100%;
+            }
+            /* Ukuran Gambar dan Video */
+            img {
+                max-width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+            iframe {
+                width: 100%;
+                height: auto;
+                min-height: 200px;
+            }
+            /* Ukuran Teks */
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            h4 {
+                font-size: 16px;
+            }
+            h5 {
+                font-size: 14px;
+            }
+            h6 {
+                font-size: 12px;
+            }
+            p {
+                font-size: 16px;
+            }
+            /* Pengaturan Teks Tabel Header */
+            header table th {
+                text-align: center;
+            }
+            header table th img {
+                width: 60px;
+                height: auto;
+            }
+            /* Pengaturan Teks Tabel Body */
+            body table td {
+                display: block;
+                width: 100%;
+            }
+            body table td img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+    <!-- Sesi Tampilan untuk Windows -->
+<div class="windows"> 
+<header>
+<h4>Kalkulator</h4>
+</header>
+<body>
+    <div style="display:flex;justify-content:center;align-items:center;margin:40px 0;">
+        <form style="background:#1e1e1e;padding:30px;border-radius:12px;box-shadow:0 0 15px rgba(0,0,0,0.5);width:320px;" name="kalkulator">
+        <table>
+            <tr>
+            <td>Input Bilangan 1</td>
+            <td><input type="number" name="bil1" placeholder="Masukkan Bilangan 1" size="30" style="width:100%;padding:10px;margin-bottom:15px;border:none;border-radius:6px;outline:none;"></td>
+        </tr>
+        <tr>
+            <td>Input Bilangan 2</td>
+            <td><input type="number" name="bil2" placeholder="Masukkan Bilangan 2" size="30" style="width:100%;padding:10px;margin-bottom:15px;border:none;border-radius:6px;outline:none;"></td>
+        </tr>
+        <tr>
+            <td>Pilih Operasi</td>
+            <td colspan="2">
+            <button type="button" onclick="proses('tambah')" name="tambah" style="padding:5px;background:#0E9A8A;border:none;border-radius:6px;color:white;font-weight:bold;cursor:pointer;">+</button>
+            <button type="button" onclick="proses('kurang')" name="kurang"style="padding:5px;background:#0E9A8A;border:none;border-radius:6px;color:white;font-weight:bold;cursor:pointer;">-</button>
+            <button type="button" onclick="proses('kali')" name="kali"style="padding:5px;background:#0E9A8A;border:none;border-radius:6px;color:white;font-weight:bold;cursor:pointer;">x</button>
+            <button type="button" onclick="proses('bagi')" name="bagi"style="padding:5px;background:#0E9A8A;border:none;border-radius:6px;color:white;font-weight:bold;cursor:pointer;">/</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Output</td>
+            <td><div id="output" style="padding:10px;background:#2a2a2a;border-radius:6px;color:#ffffff;min-height:20px;">-</div></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;margin-top:15px;font-size:14px;"><a href="index.html" style="color:#0E9A8A;text-decoration:none;">Kembali ke Halaman Awal</a>
+        </td>
+        </tr>
+        </table>
+    </div>
+    </form>
+    </body>
+    <footer>
+    <table style="text-align: left; line-height: 1.5;" border="0">
+        <th><h6>&copy;2025 Neoverse - Muhammad Ihsan Anwar 251402044 Copyright All Right Reserved</h6>
+    </table>
+</footer>
+</div>
+    <!-- Pengaturan Tampilan Khusus Android -->
+<div class="android">
+<header>
+<h4>Kalkulator</h4>
+</header>
+<body>
+    <div style="display:flex;justify-content:center;align-items:center;margin:40px 0;">
+        <form style="background:#1e1e1e;padding:30px;border-radius:12px;box-shadow:0 0 15px rgba(0,0,0,0.5);width:320px;" name="kalkulator">
+        <table>
+            <tr>
+            <td>Input Bilangan 1</td>
+            <td><input type="number" name="bil1" placeholder="Masukkan Bilangan 1" size="30" style="width:100%;padding:10px;margin-bottom:15px;border:none;border-radius:6px;outline:none;"></td>
+        </tr>
+        <tr>
+            <td>Input Bilangan 2</td>
+            <td><input type="number" name="bil2" placeholder="Masukkan Bilangan 2" size="30" style="width:100%;padding:10px;margin-bottom:15px;border:none;border-radius:6px;outline:none;"></td>
+        </tr>
+        <tr>
+            <td>Pilih Operasi</td>
+            <td colspan="2">
+            <button type="button" onclick="proses('tambah')" name="tambah" style="padding:5px;background:#0E9A8A;border:none;border-radius:6px;color:white;font-weight:bold;cursor:pointer;">+</button>
+            <button type="button" onclick="proses('kurang')" name="kurang"style="padding:5px;background:#0E9A8A;border:none;border-radius:6px;color:white;font-weight:bold;cursor:pointer;">-</button>
+            <button type="button" onclick="proses('kali')" name="kali"style="padding:5px;background:#0E9A8A;border:none;border-radius:6px;color:white;font-weight:bold;cursor:pointer;">x</button>
+            <button type="button" onclick="proses('bagi')" name="bagi"style="padding:5px;background:#0E9A8A;border:none;border-radius:6px;color:white;font-weight:bold;cursor:pointer;">/</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Output</td>
+            <td><div id="output" style="padding:10px;background:#2a2a2a;border-radius:6px;color:#ffffff;min-height:20px;">-</div></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;margin-top:15px;font-size:14px;"><a href="index.html" style="color:#0E9A8A;text-decoration:none;">Kembali ke Halaman Awal</a>
+        </td>
+        </tr>
+        </table>
+        </form>
+    </div>
+    </body>
+<footer>
+    <table style="text-align: left; line-height: 1.5;" border="0">
+        <th><h6>&copy;2025 Neoverse - Muhammad Ihsan Anwar 251402044 Copyright All Right Reserved</h6></th>
+    </table>
+</footer>
+</div>
+    <!-- Perintah Pengaturan Tampilan Android dan Windows -->
+<script>
+    // User Agent Browser
+    const ua = navigator.userAgent.toLowerCase();
+    // Pengaturan untuk tampilan Android
+    if (ua.includes("android")) {
+        document.querySelector(".android").style.display = "block";
+        // Pengaturan untuk tampilan Windows
+    } else if (ua.includes("windows")) {
+        document.querySelector(".windows").style.display = "block";
+        // Pengaturan untuk tampilan jika bukan Android atau Windows
+    } else {
+        document.body.innerHTML = "<h1>Ni websitenya cuman bisa dibuka di Android non mode dekstop dan Windows, masih tugas pemrograman web pertama, hehe. Bisa hubungi administrator@neoverse.my.id yahhh.</h1>";
+    }
+</script>
+    <!-- Perintah Perhitungan -->
+<script>
+        function proses(operasi)
+        {
+            // Cari div yang sedang aktif
+            let activeDiv;
+            if (document.querySelector(".android").style.display === "block") {
+                activeDiv = document.querySelector(".android");
+            } else {
+                activeDiv = document.querySelector(".windows");
+            }
+
+            // Ambil nilai dari input di div aktif
+            let bil1 = parseFloat(activeDiv.querySelector('input[name="bil1"]').value);
+            let bil2 = parseFloat(activeDiv.querySelector('input[name="bil2"]').value);
+            let hasil = 0;
+            let operasiText = "";
+
+            // Validasi input
+            if (isNaN(bil1) || isNaN(bil2)) {
+                alert("Mohon Masukkan Kedua Bilangan!");
+                return;
+            }
+
+            // Lakukan perhitungan berdasarkan operasi
+            switch(operasi) {
+                case 'tambah':
+                    hasil = bil1 + bil2;
+                    operasiText = bil1 + " + " + bil2 + " = " + hasil;
+                    break;
+                case 'kurang':
+                    hasil = bil1 - bil2;
+                    operasiText = bil1 + " - " + bil2 + " = " + hasil;
+                    break;
+                case 'kali':
+                    hasil = bil1 * bil2;
+                    operasiText = bil1 + " × " + bil2 + " = " + hasil;
+                    break;
+                case 'bagi':
+                    if (bil2 === 0) {
+                        alert("Tidak dapat membagi dengan nol!");
+                        return;
+                    }
+                    hasil = bil1 / bil2;
+                    operasiText = bil1 + " ÷ " + bil2 + " = " + hasil;
+                    break;
+                default:
+                    alert("Operasi tidak valid!");
+                    return;
+            }
+
+            // Update output field - cari output yang sedang aktif
+            const outputElement = activeDiv.querySelector('#output');
+            outputElement.textContent = operasiText;
+
+            // Log hasil ke console untuk debugging
+            console.log(operasiText);
+        }
+    </script>
+</html>
